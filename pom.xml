@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.pinch</groupId>
+	<artifactId>user-parent</artifactId>
+	<packaging>pom</packaging>
+	<name>user-parent</name>
+
+	<parent>
+		<groupId>com.pinch.core</groupId>
+		<artifactId>pinch-parent</artifactId>
+		<version>1.0.0</version>
+		<relativePath>../core-utils/pinch-parent</relativePath>
+	</parent>
+
+	<modules>
+		<module>user-service</module>
+		<module>../core-utils/base</module>
+		<module>../core-utils/properties</module>
+		<module>../core-utils/utilservice</module>
+		<module>../core-utils/sqljpa</module>
+		<module>../core-utils/pojo</module>
+		<module>../core-utils/kafka</module>
+		<module>../core-utils/security</module>
+		<module>../core-utils/user-client</module>
+		<module>../core-utils/transformation-client</module>
+	</modules>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<configuration>
+					<skipTests>true</skipTests>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
